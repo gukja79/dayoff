@@ -226,9 +226,7 @@
 
             google.accounts.id.initialize({
                 client_id: CLIENT_ID,
-                callback: handleCredentialResponse,
-                auto_select: true,
-                cancel_on_tap_outside: false
+                callback: handleCredentialResponse
             });
             google.accounts.id.renderButton(
                 document.getElementById("googleSignInButton"),
@@ -237,11 +235,9 @@
                     size: "large", 
                     text: "signin_with", 
                     locale: "ko", 
-                    width: 300,
-                    type: "standard"
+                    width: 300
                 }
             );
-            google.accounts.id.prompt();
         }
 
         function renderMainScreen() {
